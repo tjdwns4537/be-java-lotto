@@ -42,24 +42,32 @@ public class Lotto {
 
     public void setPlusTotal() {
         for (int i = 0; i < collectNum.size(); i++) {
-            if(i == 0) total += (collectNum.get(i) * 5000);
-            if(i == 1) total += (collectNum.get(i) * 50000);
-            if(i == 2) total += (collectNum.get(i) * 1500000);
-            if(i == 3) total += (collectNum.get(i) * 2000000000);
+            plusTotal(i);
         }
+    }
+
+    public void plusTotal(int i) {
+        if(i == 0) total += (collectNum.get(i) * 5000);
+        if(i == 1) total += (collectNum.get(i) * 50000);
+        if(i == 2) total += (collectNum.get(i) * 1500000);
+        if(i == 3) total += (collectNum.get(i) * 2000000000);
     }
 
     public void print(int originMoney) { // 당첨 로또 개수 출력
         System.out.println("당첨 통계\n---------");
         for (int i = 0; i < 4; i++) {
-            if(i == 0) System.out.println("3개 일치 (5000원) - " + collectNum.get(i) + "개");
-            if(i == 1) System.out.println("4개 일치 (50000원) - " + collectNum.get(i) + "개");
-            if(i == 2) System.out.println("5개 일치 (1500000원) - " + collectNum.get(i) + "개");
-            if(i == 3) System.out.println("6개 일치 (2000000000원) - " + collectNum.get(i) + "개");
+            printCount(i);
         }
         setPlusTotal();
         String result = round(originMoney);
         System.out.println( "총 수익률은 " + result + "%입니다.");
+    }
+
+    public void printCount(int i) {
+        if(i == 0) System.out.println("3개 일치 (5000원) - " + collectNum.get(i) + "개");
+        if(i == 1) System.out.println("4개 일치 (50000원) - " + collectNum.get(i) + "개");
+        if(i == 2) System.out.println("5개 일치 (1500000원) - " + collectNum.get(i) + "개");
+        if(i == 3) System.out.println("6개 일치 (2000000000원) - " + collectNum.get(i) + "개");
     }
 
     public String round(int originMoney) {
@@ -72,5 +80,9 @@ public class Lotto {
         }
         double percent = (total - originM) / originM * 100;
         return String.format("%.2f",percent);
+    }
+
+    public void LottoNumPrint() {
+        for(int i=0; i<number.size(); i++) System.out.println(number.get(i));
     }
 }

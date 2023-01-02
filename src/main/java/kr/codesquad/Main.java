@@ -22,7 +22,7 @@ public class Main {
         int buyCount = makeLotto.buy(haveMoney);
         for (int i = 0; i < buyCount; i++) lotto.addLotto(makeLotto.make()); // 사용자 로또 생성
         System.out.println(buyCount + "개를 구매했습니다.");
-        for(int i=0; i<lotto.getSize(); i++) System.out.println(lotto.getLotto(i));
+        lotto.LottoNumPrint();
         System.out.println("당첨 번호를 입력해 주세요.");
         for (int i = 0; i < 6; i++) inputCollectNum(scannerInput.winNumberInput());
         lotto = countNumber.collectNumberCount(lotto, winNumber);
