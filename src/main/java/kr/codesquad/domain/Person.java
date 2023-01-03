@@ -1,5 +1,7 @@
 package kr.codesquad.domain;
 
+import kr.codesquad.utilities.LottoRank;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,6 +13,7 @@ public class Person {
     double total;
 
     public Person(){
+        winNumber.add(0);
         winNumber.add(0);
         winNumber.add(0);
         winNumber.add(0);
@@ -30,15 +33,12 @@ public class Person {
         this.money = money;
     }
 
-    public int getMoney(){
-        return this.money;
-    }
-
     public Integer getWinNumber(int i) {
         return winNumber.get(i);
     }
 
     public void setWinNumber(int idx, int num) {
+        winNumber.remove(idx);
         winNumber.add(idx, num);
     }
 
@@ -65,19 +65,20 @@ public class Person {
     }
 
     public void plusTotal(int i) {
-        if(i == 0) total += (winNumber.get(i) * 5000);
-        if(i == 1) total += (winNumber.get(i) * 50000);
-        if(i == 2) total += (winNumber.get(i) * 1500000);
-        if(i == 3) total += (winNumber.get(i) * 2000000000);
+        if(i == 0) total += (winNumber.get(i) * Integer.parseInt(LottoRank.valueOf("FIVE").getRank()));
+        if(i == 1) total += (winNumber.get(i) * Integer.parseInt(LottoRank.valueOf("FOURTH").getRank()));
+        if(i == 2) total += (winNumber.get(i) * Integer.parseInt(LottoRank.valueOf("THIRD").getRank()));
+        if(i == 3) total += (winNumber.get(i) * Integer.parseInt(LottoRank.valueOf("SECOND").getRank()));
+        if(i == 4) total += (winNumber.get(i) * Integer.parseInt(LottoRank.valueOf("FIRST").getRank()));
     }
 
-    public void print(int originMoney) { // 당첨 로또 개수 출력
+    public void print() { // 당첨 로또 개수 출력
         System.out.println("당첨 통계\n---------");
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 5; i++) {
             printCount(i);
         }
         setPlusTotal();
-        String result = round(originMoney);
+        String result = round(money);
         System.out.println( "총 수익률은 " + result + "%입니다.");
     }
 
@@ -85,7 +86,8 @@ public class Person {
         if(i == 0) System.out.println("3개 일치 (5000원) - " + winNumber.get(i) + "개");
         if(i == 1) System.out.println("4개 일치 (50000원) - " + winNumber.get(i) + "개");
         if(i == 2) System.out.println("5개 일치 (1500000원) - " + winNumber.get(i) + "개");
-        if(i == 3) System.out.println("6개 일치 (2000000000원) - " + winNumber.get(i) + "개");
+        if(i == 3) System.out.println("5개 일치 (30000000원), 보너스 볼 일치 - " + winNumber.get(i) + "개");
+        if(i == 4) System.out.println("6개 일치 (2000000000원) - " + winNumber.get(i) + "개");
     }
 
     public String round(int originMoney) {

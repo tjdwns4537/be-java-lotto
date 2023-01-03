@@ -14,7 +14,7 @@ public class Main {
     public static void main(String[] args) {
         inputService.startPersonInput(person);
         inputService.startLottoInput(lotto);
-        person = countNumber.collectNumberCount(person, lotto.getWinNumber());
-        person.print(person.getMoney());
+        person = countNumber.collectNumberCount(person, lotto);
+        person.print();
     }
 }
