@@ -8,10 +8,10 @@ public class InputService {
     ScannerInput scannerInput = new ScannerInput();
     MakeLottoInterface makeLotto = new MakeLottoRobot();
 
-    public void startInput(Person person, Lotto lotto) {
+    public void startInputRobot(Person person, Lotto lotto) {
         System.out.println("구입금액을 입력해 주세요.");
         buy(person);
-        for (int i = 0; i < person.getHaveLotto(); i++) person.addLotto(makeLotto.make()); // 사용자 로또 생성
+        person = makeLotto.IssuedLotto(person);
         System.out.println(person.getHaveLotto() + "개를 구매했습니다.");
         person.LottoNumPrint();
         System.out.println("당첨 번호를 입력해 주세요.");
@@ -19,6 +19,8 @@ public class InputService {
             inputCollectNum(lotto);
         }
     }
+
+//    pㅡㅇ으
 
     public void buy(Person person){
         int haveMoney = scannerInput.inputNumber();
