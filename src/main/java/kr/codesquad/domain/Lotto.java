@@ -73,13 +73,12 @@ public class Lotto {
     public String round(int originMoney) {
         double originM = originMoney;
         if (total < originM){
-            double percent = ((originM - total) / originM) * 100;
-            String temp = String.format("%.2f",percent);
-            temp = ("-" + temp);
+            String temp = String.format("%.3f",((originM - total) / originM) * 100);
+            temp = ("-" + temp.substring(0,temp.length()-1));
             return temp;
         }
-        double percent = (total - originM) / originM * 100;
-        return String.format("%.2f",percent);
+        String percent = String.format(("%.3f"), (total - originM) / originM * 100);
+        return percent.substring(0,percent.length()-1);
     }
 
     public void LottoNumPrint() {
