@@ -1,4 +1,4 @@
-package kr.codesquad.service;
+package kr.codesquad.service.Input;
 
 import java.util.Scanner;
 

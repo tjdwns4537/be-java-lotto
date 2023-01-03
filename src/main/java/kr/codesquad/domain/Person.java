@@ -5,17 +5,16 @@ import java.util.List;
 
 public class Person {
     List<List<Integer>> number = new ArrayList<>();
-    List<Integer> collectNum = new ArrayList<>();
+    List<Integer> winNumber = new ArrayList<>();
     int money;
     int haveLotto;
     double total;
-    int bonusNumber;
 
     public Person(){
-        collectNum.add(0);
-        collectNum.add(0);
-        collectNum.add(0);
-        collectNum.add(0);
+        winNumber.add(0);
+        winNumber.add(0);
+        winNumber.add(0);
+        winNumber.add(0);
         total = 0;
     }
 
@@ -35,16 +34,16 @@ public class Person {
         return this.money;
     }
 
-    public Integer getCollectNum(int i) {
-        return collectNum.get(i);
+    public Integer getWinNumber(int i) {
+        return winNumber.get(i);
     }
 
-    public void setCollectNum(int idx, int num) {
-        collectNum.add(idx, num);
+    public void setWinNumber(int idx, int num) {
+        winNumber.add(idx, num);
     }
 
     public Integer collectNumSize() {
-        return collectNum.size();
+        return winNumber.size();
     }
 
     public void addLotto(List<Integer> inputNumber) {
@@ -60,16 +59,16 @@ public class Person {
     }
 
     public void setPlusTotal() {
-        for (int i = 0; i < collectNum.size(); i++) {
+        for (int i = 0; i < winNumber.size(); i++) {
             plusTotal(i);
         }
     }
 
     public void plusTotal(int i) {
-        if(i == 0) total += (collectNum.get(i) * 5000);
-        if(i == 1) total += (collectNum.get(i) * 50000);
-        if(i == 2) total += (collectNum.get(i) * 1500000);
-        if(i == 3) total += (collectNum.get(i) * 2000000000);
+        if(i == 0) total += (winNumber.get(i) * 5000);
+        if(i == 1) total += (winNumber.get(i) * 50000);
+        if(i == 2) total += (winNumber.get(i) * 1500000);
+        if(i == 3) total += (winNumber.get(i) * 2000000000);
     }
 
     public void print(int originMoney) { // 당첨 로또 개수 출력
@@ -83,10 +82,10 @@ public class Person {
     }
 
     public void printCount(int i) {
-        if(i == 0) System.out.println("3개 일치 (5000원) - " + collectNum.get(i) + "개");
-        if(i == 1) System.out.println("4개 일치 (50000원) - " + collectNum.get(i) + "개");
-        if(i == 2) System.out.println("5개 일치 (1500000원) - " + collectNum.get(i) + "개");
-        if(i == 3) System.out.println("6개 일치 (2000000000원) - " + collectNum.get(i) + "개");
+        if(i == 0) System.out.println("3개 일치 (5000원) - " + winNumber.get(i) + "개");
+        if(i == 1) System.out.println("4개 일치 (50000원) - " + winNumber.get(i) + "개");
+        if(i == 2) System.out.println("5개 일치 (1500000원) - " + winNumber.get(i) + "개");
+        if(i == 3) System.out.println("6개 일치 (2000000000원) - " + winNumber.get(i) + "개");
     }
 
     public String round(int originMoney) {

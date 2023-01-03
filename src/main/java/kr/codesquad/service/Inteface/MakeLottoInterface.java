@@ -1,4 +1,4 @@
-package kr.codesquad.service;
+package kr.codesquad.service.Inteface;
 
 import kr.codesquad.domain.Person;
 
@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface MakeLottoInterface {
 
-    Person IssuedLotto(Person person);
+    void IssuedLotto(Person person);
 
     List<Integer> make();
 }

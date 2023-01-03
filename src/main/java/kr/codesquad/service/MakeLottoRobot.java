@@ -1,18 +1,18 @@
 package kr.codesquad.service;
 
 import kr.codesquad.domain.Person;
+import kr.codesquad.service.Inteface.MakeLottoInterface;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class MakeLottoRobot implements MakeLottoInterface{
+public class MakeLottoRobot implements MakeLottoInterface {
 
-    public Person IssuedLotto(Person person) {
+    public void IssuedLotto(Person person) {
         for (int i = 0; i < person.getHaveLotto(); i++) {
             person.addLotto(make()); // 사용자 로또 생성
         }
-        return person;
     }
 
     public List<Integer> make() { // 사용자 로또 만들기
@@ -24,4 +24,6 @@ public class MakeLottoRobot implements MakeLottoInterface{
         Collections.sort(resultLotto);
         return resultLotto;
     }
+
+
 }

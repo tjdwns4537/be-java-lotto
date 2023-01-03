@@ -21,18 +21,21 @@ public class CountNumber {
         return cnt;
     }
 
-    public Person collectNumberCount(Person person, List<Integer> collectNumber) { // 로또 일치 개수 구하기
+    public Person collectNumberCount(Person person, List<Integer> winNumber) { // 로또 일치 개수 구하기
         for (int i = 0; i < person.getSize(); i++) {
-            collectNumberCountIndex(person,collectNumber,i);
+            collectNumberCountIndex(person,winNumber,i);
         }
         return person;
     }
 
-    public void collectNumberCountIndex(Person person, List<Integer> collectNumber, int i) {
-        int cnt = checkNumber(person.getLotto(i), collectNumber);
-        if(cnt == 3) person.setCollectNum(0, person.getCollectNum(0)+1);
-        if(cnt == 4) person.setCollectNum(1, person.getCollectNum(1)+1);
-        if(cnt == 5) person.setCollectNum(2, person.getCollectNum(2)+1);
-        if(cnt == 6) person.setCollectNum(3, person.getCollectNum(3)+1);
+    public void collectNumberCountIndex(Person person, List<Integer> winNumber, int i) {
+        int cnt = checkNumber(person.getLotto(i), winNumber);
+        boolean check = false;
+        if(cnt == 3) person.setWinNumber(0, person.getWinNumber(0)+1);
+        if(cnt == 4) person.setWinNumber(1, person.getWinNumber(1)+1);
+        if(cnt == 5){
+            person.setWinNumber(2, person.getWinNumber(2)+1);
+        }
+        if(cnt == 6) person.setWinNumber(3, person.getWinNumber(3)+1);
     }
 }
