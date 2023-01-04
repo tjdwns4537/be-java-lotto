@@ -14,6 +14,8 @@ public class MakeLottoPerson implements MakeLottoInterface {
 
     @Override
     public List<Integer> make() {
+
+
         return null;
     }
 }
