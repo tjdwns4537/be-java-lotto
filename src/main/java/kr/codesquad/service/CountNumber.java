@@ -38,7 +38,7 @@ public class CountNumber {
     }
 
     public void checkBonus(List<Integer> list, int bonus, Person person) {
-        if(list.contains(bonus)) person.setWinNumber(3, person.getWinNumber(3)+1);
         if(!list.contains(bonus)) person.setWinNumber(2, person.getWinNumber(2)+1);
+        if(list.contains(bonus)) person.setWinNumber(3, person.getWinNumber(3)+1);
     }
 }
