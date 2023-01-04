@@ -24,6 +24,4 @@ public class MakeLottoRobot implements MakeLottoInterface {
         Collections.sort(resultLotto);
         return resultLotto;
     }
-
-
 }

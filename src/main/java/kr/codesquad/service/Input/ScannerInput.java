@@ -7,4 +7,7 @@ public class ScannerInput {
     public int inputNumber() {
         return sc.nextInt();
     }
+    public String inputLine() {
+        return sc.nextLine();
+    }
 }

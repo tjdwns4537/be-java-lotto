@@ -16,8 +16,10 @@ public class InputService {
         // 구입 금액를 1000원 단위로 설정 필요
         System.out.println("구입금액을 입력해 주세요.");
         buy(person);
-//        makeLotto.IssuedLotto(person);
+        makeLottoPerson.IssuedLotto(person);
+        makeLottoRobot.IssuedLotto(person);
         person.LottoNumPrint();
+        System.out.println("수동으로"+ person.getHaveHandLotto() + "장," + "자동으로" + person.getHaveRobotLotto() + "개를 구매했습니다.");
     }
 
     public void startLottoInput(Lotto lotto) {
@@ -35,7 +37,6 @@ public class InputService {
         System.out.println("수동으로 구매할 로또 수를 입력해 주세요.");
         person.setHaveHandLotto(scannerInput.inputNumber());
         person.setHaveRobotLotto(haveMoney/1000 - person.getHaveHandLotto()); // 14개면 14개에 대한 범위에 대한 예외 필요
-        System.out.println("수동으로"+ person.getHaveHandLotto() + "장," + "자동으로" + person.getHaveRobotLotto() + "개를 구매했습니다.");
     }
 
     public void inputCollectNum(Lotto lotto) {
