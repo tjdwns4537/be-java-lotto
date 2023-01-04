@@ -7,18 +7,25 @@ import java.util.List;
 
 public class Person {
     List<List<Integer>> number = new ArrayList<>();
-    List<Integer> winNumber = new ArrayList<>();
+    Integer[] winNumberArr;
     int money;
     int haveLotto;
     double total;
 
     public Person(){
-        winNumber.add(0);
-        winNumber.add(0);
-        winNumber.add(0);
-        winNumber.add(0);
-        winNumber.add(0);
+        winNumberArr = new Integer[5];
+        for (int i = 0; i < 5; i++) {
+            winNumberArr[i] = 0;
+        }
         total = 0;
+    }
+
+    public Integer getWinNumberArr(int i){
+        return winNumberArr[i];
+    }
+
+    public void setWinNumberArr(int idx, int num){
+        winNumberArr[idx] = num;
     }
 
     public int getHaveLotto(){
@@ -31,19 +38,6 @@ public class Person {
 
     public void setMoney(int money) {
         this.money = money;
-    }
-
-    public Integer getWinNumber(int i) {
-        return winNumber.get(i);
-    }
-
-    public void setWinNumber(int idx, int num) {
-        winNumber.remove(idx);
-        winNumber.add(idx, num);
-    }
-
-    public Integer collectNumSize() {
-        return winNumber.size();
     }
 
     public void addLotto(List<Integer> inputNumber) {
@@ -59,17 +53,17 @@ public class Person {
     }
 
     public void setPlusTotal() {
-        for (int i = 0; i < winNumber.size(); i++) {
+        for (int i = 0; i < winNumberArr.length; i++) {
             plusTotal(i);
         }
     }
 
     public void plusTotal(int i) {
-        if(i == 0) total += (winNumber.get(i) * Integer.parseInt(LottoRank.valueOf("FIVE").getRank()));
-        if(i == 1) total += (winNumber.get(i) * Integer.parseInt(LottoRank.valueOf("FOURTH").getRank()));
-        if(i == 2) total += (winNumber.get(i) * Integer.parseInt(LottoRank.valueOf("THIRD").getRank()));
-        if(i == 3) total += (winNumber.get(i) * Integer.parseInt(LottoRank.valueOf("SECOND").getRank()));
-        if(i == 4) total += (winNumber.get(i) * Integer.parseInt(LottoRank.valueOf("FIRST").getRank()));
+        if(i == 0) total += (winNumberArr[i] * Integer.parseInt(LottoRank.valueOf("FIVE").getRank()));
+        if(i == 1) total += (winNumberArr[i] * Integer.parseInt(LottoRank.valueOf("FOURTH").getRank()));
+        if(i == 2) total += (winNumberArr[i] * Integer.parseInt(LottoRank.valueOf("THIRD").getRank()));
+        if(i == 3) total += (winNumberArr[i] * Integer.parseInt(LottoRank.valueOf("SECOND").getRank()));
+        if(i == 4) total += (winNumberArr[i] * Integer.parseInt(LottoRank.valueOf("FIRST").getRank()));
     }
 
     public void print() { // 당첨 로또 개수 출력
@@ -83,11 +77,11 @@ public class Person {
     }
 
     public void printCount(int i) {
-        if(i == 0) System.out.println("3개 일치 (5000원) - " + winNumber.get(i) + "개");
-        if(i == 1) System.out.println("4개 일치 (50000원) - " + winNumber.get(i) + "개");
-        if(i == 2) System.out.println("5개 일치 (1500000원) - " + winNumber.get(i) + "개");
-        if(i == 3) System.out.println("5개 일치 (30000000원), 보너스 볼 일치 - " + winNumber.get(i) + "개");
-        if(i == 4) System.out.println("6개 일치 (2000000000원) - " + winNumber.get(i) + "개");
+        if(i == 0) System.out.println("3개 일치 (5000원) - " + winNumberArr[i] + "개");
+        if(i == 1) System.out.println("4개 일치 (50000원) - " + winNumberArr[i] + "개");
+        if(i == 2) System.out.println("5개 일치 (1500000원) - " + winNumberArr[i] + "개");
+        if(i == 3) System.out.println("5개 일치 (30000000원), 보너스 볼 일치 - " + winNumberArr[i] + "개");
+        if(i == 4) System.out.println("6개 일치 (2000000000원) - " + winNumberArr[i] + "개");
     }
 
     public String round(int originMoney) {
