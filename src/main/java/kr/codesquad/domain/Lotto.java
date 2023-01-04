@@ -18,4 +18,7 @@ public class Lotto {
     public List<Integer> getWinNumber() {
         return this.winNumber;
     }
+    public void setWinNumber(int i) {
+        this.winNumber.add(i);
+    }
 }

@@ -11,7 +11,7 @@ public class Main {
     static CountNumber countNumber = new CountNumber();
     static InputService inputService = new InputService();
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         inputService.startPersonInput(person);
         inputService.startLottoInput(lotto);
         person = countNumber.collectNumberCount(person, lotto);

@@ -23,9 +23,9 @@ public class MakeLottoPerson implements MakeLottoInterface {
     public List<Integer> make() {
         String numberLine = scannerInput.inputLine();
         String[] split = numberLine.split(",");
-        List<String> inputNuber = Arrays.asList(split);
+        List<String> inputNumber = Arrays.asList(split);
         List<Integer> changeInteger = new ArrayList<>();
-        for (String i : inputNuber) {
+        for (String i : inputNumber) {
             changeInteger.add(Integer.parseInt(i.trim()));
         }
         return changeInteger;
