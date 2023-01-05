@@ -16,7 +16,8 @@ public class CustomException{
 
     public void numberCheck(String[] split) throws Exception{
         for (String i : split) {
-            if(Integer.parseInt(i) < 1|| Integer.parseInt(i) > 45){
+            String temp = i.trim();
+            if(Integer.parseInt(temp) < 1|| Integer.parseInt(temp) > 45){
                 throw new Exception("1부터 45사이의 숫자를 입력해야합니다");
             }
         }

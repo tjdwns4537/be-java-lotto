@@ -28,7 +28,6 @@ public class Person {
     public void setWinNumberArr(int idx, int num){
         winNumberArr[idx] = num;
     }
-
     public int getHaveRobotLotto(){
         return this.haveRobotLotto;
     }
