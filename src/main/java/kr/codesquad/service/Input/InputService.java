@@ -19,11 +19,12 @@ public class InputService {
     public void startPersonInput(Person person) throws Exception{
         // 구입 금액를 1000원 단위로 설정 필요
         System.out.println("구입금액을 입력해 주세요.");
-        try{
-            buy(person);
-        } catch (Exception e) {
-            System.out.println("");
-        }
+        buy(person);
+//        try{
+//
+//        } catch (Exception e) {
+//            System.out.println("");
+//        }
         System.out.println("수동으로 구매할 번호를 입력해 주세요.");
         makeLottoPerson.IssuedLotto(person);
         makeLottoRobot.IssuedLotto(person);
