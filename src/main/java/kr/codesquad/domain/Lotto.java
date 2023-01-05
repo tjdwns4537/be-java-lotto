@@ -18,7 +18,6 @@ public class Lotto {
     public void setWinNumber(List<Integer> winNumber) {
         this.winNumber = winNumber;
     }
-
     public List<Integer> getWinNumber() {
         return this.winNumber;
     }

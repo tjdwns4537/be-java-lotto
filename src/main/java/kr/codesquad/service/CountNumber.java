@@ -31,14 +31,15 @@ public class CountNumber {
 
     public void collectNumberCountIndex(Person person, Lotto lotto, int i) {
         int cnt = checkNumber(person.getLotto(i), lotto.getWinNumber());
-        if(cnt == 3) person.setWinNumber(0, person.getWinNumber(0)+1);
-        if(cnt == 4) person.setWinNumber(1, person.getWinNumber(1)+1);
+
+        if(cnt == 3) person.setWinNumberArr(0,person.getWinNumberArr(0)+1);
+        if(cnt == 4) person.setWinNumberArr(1,person.getWinNumberArr(1)+1);
         if(cnt == 5) checkBonus(person.getLotto(i),lotto.getBonus(),person);
-        if(cnt == 6) person.setWinNumber(4, person.getWinNumber(4)+1);
+        if(cnt == 6) person.setWinNumberArr(4,person.getWinNumberArr(4)+1);
     }
 
     public void checkBonus(List<Integer> list, int bonus, Person person) {
-        if(list.contains(bonus)) person.setWinNumber(3, person.getWinNumber(3)+1);
-        if(!list.contains(bonus)) person.setWinNumber(2, person.getWinNumber(2)+1);
+        if(!list.contains(bonus)) person.setWinNumberArr(2, person.getWinNumberArr(2)+1);
+        if(list.contains(bonus)) person.setWinNumberArr(3, person.getWinNumberArr(3)+1);
     }
 }
