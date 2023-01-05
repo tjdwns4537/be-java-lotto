@@ -8,6 +8,12 @@ public class CustomException{
 
     }
 
+    public void InputLottoCountCheck(int cnt) throws Exception{
+        if(cnt > 6) {
+            throw new Exception("입력 가능 로또 숫자는 6개까지 입니다.");
+        }
+    }
+
     public int buyMoneyCheck(int num1, int num2) throws Exception {
         if(num1 %  num2 != 0){
             throw new Exception("1000원 단위로 구매가능합니다.");

@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface MakeLottoInterface {
 
-    void IssuedLotto(Person person);
+    void IssuedLotto(Person person) throws Exception;
 
-    List<Integer> make();
+    List<Integer> make() throws Exception;
 }
