@@ -25,12 +25,11 @@ public class MakeLottoPerson implements MakeLottoInterface {
     public List<Integer> make() throws Exception {
         String numberLine = scannerInput.inputLine();
         String[] split = numberLine.split(",");
-        customException.InputLottoCountCheck(split.length);
+        customException.inputHanLottoCheck(split.length);
+        customException.numberCheck(split);
         List<String> inputNumber = Arrays.asList(split);
         List<Integer> changeInteger = new ArrayList<>();
-        for (String i : inputNumber) {
-            changeInteger.add(Integer.parseInt(i.trim()));
-        }
+        for (String i : inputNumber) changeInteger.add(Integer.parseInt(i.trim()));
         return changeInteger;
     }
 }
