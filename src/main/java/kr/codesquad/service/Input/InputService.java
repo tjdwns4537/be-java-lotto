@@ -2,6 +2,7 @@ package kr.codesquad.service.Input;
 
 import kr.codesquad.domain.Lotto;
 import kr.codesquad.domain.Person;
+import kr.codesquad.exception.CustomException;
 import kr.codesquad.service.Inteface.MakeLottoInterface;
 import kr.codesquad.service.MakeLottoPerson;
 import kr.codesquad.service.MakeLottoRobot;
@@ -12,6 +13,7 @@ import java.util.Scanner;
 
 public class InputService {
 
+    CustomException customException = new CustomException();
     ScannerInput scannerInput = new ScannerInput();
     MakeLottoInterface makeLottoRobot = new MakeLottoRobot();
     MakeLottoInterface makeLottoPerson = new MakeLottoPerson();
@@ -20,11 +22,6 @@ public class InputService {
         // 구입 금액를 1000원 단위로 설정 필요
         System.out.println("구입금액을 입력해 주세요.");
         buy(person);
-//        try{
-//
-//        } catch (Exception e) {
-//            System.out.println("");
-//        }
         System.out.println("수동으로 구매할 번호를 입력해 주세요.");
         makeLottoPerson.IssuedLotto(person);
         makeLottoRobot.IssuedLotto(person);
@@ -44,17 +41,18 @@ public class InputService {
         lotto.setBonus(scannerInput.inputNumber());
     }
 
-    public void buy(Person person){
+    public void buy(Person person) {
         int haveMoney = scannerInput.inputNumber();
-        int buyLottoCount = haveMoney / 1000;
+        int buyLottoCount = customException.butMoneyCheck(haveMoney, 1000);
         person.setMoney(haveMoney);
+        handBuyLotto(person, buyLottoCount);
+    }
+
+    public void handBuyLotto(Person person, int buyLottoCount){
         System.out.println("수동으로 구매할 로또 수를 입력해 주세요.");
         int handLotto = scannerInput.inputNumber();
-//        if(handLotto > buyLottoCount){
-//            throw new Exception("구매할 수 있는 로또 개수보다 많은 수를 입력하셨습니다.");
-//        }
         person.setHaveHandLotto(handLotto);
-        person.setHaveRobotLotto(haveMoney/1000 - person.getHaveHandLotto());
+        person.setHaveRobotLotto(buyLottoCount - person.getHaveHandLotto());
     }
 
 
