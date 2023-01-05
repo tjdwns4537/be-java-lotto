@@ -21,9 +21,10 @@ public class CustomException{
         }
     }
 
-    public void duplicateBonnus(Lotto lotto, int num) {
+    public int duplicateBonnus(Lotto lotto, int num) throws Exception{
         if(lotto.getWinNumber().contains(num)){
-            throw new Exception();
+            throw new Exception("당첨 숫자 중에 중복되는 수가 있습니다.");
         }
+        return num;
     }
 }

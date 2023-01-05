@@ -29,16 +29,15 @@ public class InputService {
         person.LottoNumPrint();
     }
 
-    public void startLottoInput(Lotto lotto) {
+    public void startLottoInput(Lotto lotto) throws Exception{
         System.out.println("당첨 번호를 입력해 주세요.");
         Scanner sc = new Scanner(System.in);
         String num = sc.nextLine();
         List<String> inputList = Arrays.asList(num.split(","));
-        for(String i : inputList){
-            lotto.getWinNumber().add(Integer.parseInt(i.trim()));
-        }
+        for(String i : inputList) lotto.getWinNumber().add(Integer.parseInt(i.trim()));
         System.out.println("보너스 볼을 입력해주세요.");
-        lotto.setBonus(scannerInput.inputNumber());
+        int bonus = customException.duplicateBonnus(lotto, scannerInput.inputNumber());
+        lotto.setBonus(bonus);
     }
 
     public void buy(Person person) throws Exception{
