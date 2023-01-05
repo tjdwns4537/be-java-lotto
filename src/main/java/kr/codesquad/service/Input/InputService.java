@@ -41,19 +41,18 @@ public class InputService {
         lotto.setBonus(scannerInput.inputNumber());
     }
 
-    public void buy(Person person) {
+    public void buy(Person person) throws Exception{
         int haveMoney = scannerInput.inputNumber();
-        int buyLottoCount = customException.butMoneyCheck(haveMoney, 1000);
+        int buyLottoCount = customException.buyMoneyCheck(haveMoney, 1000);
         person.setMoney(haveMoney);
         handBuyLotto(person, buyLottoCount);
     }
 
-    public void handBuyLotto(Person person, int buyLottoCount){
+    public void handBuyLotto(Person person, int buyLottoCount) throws Exception{
         System.out.println("수동으로 구매할 로또 수를 입력해 주세요.");
         int handLotto = scannerInput.inputNumber();
+        customException.checkTotalCount(handLotto, buyLottoCount);
         person.setHaveHandLotto(handLotto);
         person.setHaveRobotLotto(buyLottoCount - person.getHaveHandLotto());
     }
-
-
 }
