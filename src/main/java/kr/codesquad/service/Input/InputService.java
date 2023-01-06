@@ -35,8 +35,8 @@ public class InputService {
 
     public void startLottoInput(Lotto lotto){
         System.out.println("당첨 번호를 입력해 주세요.");
-        Scanner sc = new Scanner(System.in);
-        String num = sc.nextLine();
+        String num = scannerInput.inputLine();
+
         List<String> inputList = Arrays.asList(num.split(","));
         for(String i : inputList) lotto.getWinNumber().add(Integer.parseInt(i.trim()));
         System.out.println("보너스 볼을 입력해주세요.");
