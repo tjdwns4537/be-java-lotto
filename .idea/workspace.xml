@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cf264517-5440-4687-933c-bb5dd6a0bbaa" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/codesquad/service/Input/InputService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/codesquad/service/Input/InputService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/codesquad/service/Inteface/MakeLottoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/codesquad/service/Inteface/MakeLottoInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/codesquad/service/MakeLottoPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/codesquad/service/MakeLottoPerson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/codesquad/service/MakeLottoRobot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/codesquad/service/MakeLottoRobot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
