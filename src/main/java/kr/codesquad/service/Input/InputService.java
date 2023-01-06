@@ -18,7 +18,7 @@ public class InputService {
     MakeLottoInterface makeLottoRobot = new MakeLottoRobot();
     MakeLottoInterface makeLottoPerson = new MakeLottoPerson();
 
-    public void startPersonInput(Person person) throws Exception{
+    public void startPersonInput(Person person) {
         // 구입 금액를 1000원 단위로 설정 필요
         System.out.println("구입금액을 입력해 주세요.");
         buy(person);
@@ -29,7 +29,7 @@ public class InputService {
         person.LottoNumPrint();
     }
 
-    public void startLottoInput(Lotto lotto) throws Exception{
+    public void startLottoInput(Lotto lotto){
         System.out.println("당첨 번호를 입력해 주세요.");
         Scanner sc = new Scanner(System.in);
         String num = sc.nextLine();
@@ -40,14 +40,14 @@ public class InputService {
         lotto.setBonus(bonus);
     }
 
-    public void buy(Person person) throws Exception{
+    public void buy(Person person) {
         int haveMoney = scannerInput.inputNumber();
         int buyLottoCount = customException.buyMoneyCheck(haveMoney, 1000);
         person.setMoney(haveMoney);
         handBuyLotto(person, buyLottoCount);
     }
 
-    public void handBuyLotto(Person person, int buyLottoCount) throws Exception{
+    public void handBuyLotto(Person person, int buyLottoCount) {
         System.out.println("수동으로 구매할 로또 수를 입력해 주세요.");
         int handLotto = scannerInput.inputNumber();
         customException.checkTotalCount(handLotto, buyLottoCount);

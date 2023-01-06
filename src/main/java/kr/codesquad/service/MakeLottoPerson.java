@@ -15,14 +15,14 @@ public class MakeLottoPerson implements MakeLottoInterface {
     CustomException customException = new CustomException();
 
     @Override
-    public void IssuedLotto(Person person) throws Exception{
+    public void IssuedLotto(Person person) {
         for (int i = 0; i < person.getHaveHandLotto(); i++) {
             person.addLotto(make()); // 사용자 로또 생성
         }
     }
 
     @Override
-    public List<Integer> make() throws Exception {
+    public List<Integer> make() {
         String numberLine = scannerInput.inputLine();
         String[] split = numberLine.split(",");
         customException.inputHanLottoCheck(split.length);
