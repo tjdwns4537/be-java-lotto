@@ -7,5 +7,5 @@ import java.util.List;
 public interface MakeLottoInterface {
     void issuedLotto(Person person);
 
-    List<Integer> make();
+    List<Integer> makeLottoNumber();
 }

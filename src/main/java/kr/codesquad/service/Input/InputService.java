@@ -36,7 +36,6 @@ public class InputService {
     public void startLottoInput(Lotto lotto){
         System.out.println("당첨 번호를 입력해 주세요.");
         String num = scannerInput.inputLine();
-
         List<String> inputList = Arrays.asList(num.split(","));
         for(String i : inputList) lotto.getWinNumber().add(Integer.parseInt(i.trim()));
         System.out.println("보너스 볼을 입력해주세요.");
@@ -48,10 +47,10 @@ public class InputService {
         int haveMoney = scannerInput.inputNumber();
         int buyLottoCount = customException.buyMoneyCheck(haveMoney, 1000);
         person.setMoney(haveMoney);
-        handBuyLotto(person, buyLottoCount);
+        handBuyLottoCount(person, buyLottoCount);
     }
 
-    public void handBuyLotto(Person person, int buyLottoCount) {
+    public void handBuyLottoCount(Person person, int buyLottoCount) {
         System.out.println("수동으로 구매할 로또 수를 입력해 주세요.");
         int handLotto = scannerInput.inputNumber();
         customException.checkTotalCount(handLotto, buyLottoCount);

@@ -17,12 +17,12 @@ public class MakeLottoPerson implements MakeLottoInterface {
     @Override
     public void issuedLotto(Person person) {
         for (int i = 0; i < person.getHaveHandLotto(); i++) {
-            person.addLotto(make()); // 사용자 로또 생성
+            person.addLotto(makeLottoNumber()); // 사용자 로또 생성
         }
     }
 
     @Override
-    public List<Integer> make() {
+    public List<Integer> makeLottoNumber() {
         String numberLine = scannerInput.inputLine();
         String[] split = numberLine.split(",");
         customException.inputHanLottoCheck(split.length);
