@@ -17,9 +17,13 @@ public class CustomValideException{
     public static void numberCheck(String[] split) {
         for (String i : split) {
             String temp = i.trim();
-            if(Integer.parseInt(temp) < 1|| Integer.parseInt(temp) > 45){
-                throw new RuntimeException("1부터 45사이의 숫자를 입력해야합니다");
-            }
+            numberCheckError(temp);
+        }
+    }
+
+    public static void numberCheckError(String temp) {
+        if(Integer.parseInt(temp) < 1|| Integer.parseInt(temp) > 45){
+            throw new RuntimeException("1부터 45사이의 숫자를 입력해야합니다");
         }
     }
 

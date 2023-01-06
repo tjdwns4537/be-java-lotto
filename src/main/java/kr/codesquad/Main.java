@@ -6,6 +6,7 @@ import kr.codesquad.service.CountNumber;
 import kr.codesquad.service.Input.InputService;
 
 public class Main {
+
     static Person person = new Person();
     static Lotto lotto = new Lotto();
     static CountNumber countNumber = new CountNumber();
