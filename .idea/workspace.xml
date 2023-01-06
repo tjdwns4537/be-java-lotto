@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cf264517-5440-4687-933c-bb5dd6a0bbaa" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/codesquad/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/codesquad/Main.java" afterDir="false" />
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/codesquad/exception/CustomException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/codesquad/exception/CustomException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/codesquad/service/Input/InputService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/codesquad/service/Input/InputService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/codesquad/service/Inteface/MakeLottoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/codesquad/service/Inteface/MakeLottoInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/codesquad/service/MakeLottoPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/codesquad/service/MakeLottoPerson.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/codesquad/domain/Lotto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/codesquad/domain/Lotto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/codesquad/domain/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/codesquad/domain/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/codesquad/exception/CustomException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/codesquad/exception/CustomException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/codesquad/service/Input/InputService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/codesquad/service/Input/InputService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/codesquad/service/Input/ScannerInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/codesquad/service/Input/ScannerInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/codesquad/service/Inteface/MakeLottoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/codesquad/service/Inteface/MakeLottoInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/codesquad/service/MakeLottoPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/codesquad/service/MakeLottoPerson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/codesquad/service/MakeLottoRobot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/codesquad/service/MakeLottoRobot.java" afterDir="false" />
+>>>>>>> d3cd3031b1aa48efd08cde615ff528c904c9293a
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2JnU66INxcdrtzCG3wOmio4JbGZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+<<<<<<< HEAD
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+=======
+>>>>>>> d3cd3031b1aa48efd08cde615ff528c904c9293a
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="kr.codesquad.Main" />
+      <module name="java-lotto.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kr.codesquad.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cf264517-5440-4687-933c-bb5dd6a0bbaa" name="Changes" comment="" />
+      <created>1672713162244</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1672713162244</updated>
+      <workItem from="1672713163889" duration="18000" />
+      <workItem from="1672713455751" duration="17510000" />
+      <workItem from="1672795095828" duration="1633000" />
+      <workItem from="1672796737034" duration="1833000" />
+      <workItem from="1672799040210" duration="8000" />
+      <workItem from="1672799320480" duration="693000" />
+      <workItem from="1672800018920" duration="7919000" />
+      <workItem from="1672819262256" duration="3438000" />
+<<<<<<< HEAD
+      <workItem from="1672970327284" duration="1282000" />
+      <workItem from="1672972404710" duration="7000" />
+      <workItem from="1672972817350" duration="3009000" />
+=======
+>>>>>>> d3cd3031b1aa48efd08cde615ff528c904c9293a
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

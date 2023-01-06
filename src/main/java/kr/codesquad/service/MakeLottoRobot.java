@@ -10,7 +10,7 @@ import java.util.List;
 public class MakeLottoRobot implements MakeLottoInterface {
 
     public void IssuedLotto(Person person) {
-        for (int i = 0; i < person.getHaveLotto(); i++) {
+        for (int i = 0; i < person.getHaveRobotLotto(); i++) {
             person.addLotto(make()); // 사용자 로또 생성
         }
     }
@@ -24,6 +24,4 @@ public class MakeLottoRobot implements MakeLottoInterface {
         Collections.sort(resultLotto);
         return resultLotto;
     }
-
-
 }

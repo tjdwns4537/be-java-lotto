@@ -9,7 +9,8 @@ public class Person {
     List<List<Integer>> number = new ArrayList<>();
     Integer[] winNumberArr;
     int money;
-    int haveLotto;
+    int haveRobotLotto;
+    int haveHandLotto;
     double total;
 
     public Person(){
@@ -20,16 +21,19 @@ public class Person {
         total = 0;
     }
 
-    public int getHaveLotto(){
-        return this.haveLotto;
+    public Integer getWinNumberArr(int i){
+        return winNumberArr[i];
     }
 
-    public void setHaveLotto(int cnt) {
-        this.haveLotto = cnt;
+    public void setWinNumberArr(int idx, int num){
+        winNumberArr[idx] = num;
+    }
+    public int getHaveRobotLotto(){
+        return this.haveRobotLotto;
     }
 
-    public void setMoney(int money) {
-        this.money = money;
+    public void setHaveRobotLotto(int cnt) {
+        this.haveRobotLotto = cnt;
     }
 
     public Integer getWinNumber(int i) {
@@ -38,6 +42,18 @@ public class Person {
 
     public void setWinNumber(int idx, int num) {
         winNumberArr[idx] = num;
+    }
+
+    public int getHaveHandLotto(){
+        return this.haveHandLotto;
+    }
+
+    public void setHaveHandLotto(int cnt) {
+        this.haveHandLotto = cnt;
+    }
+
+    public void setMoney(int money) {
+        this.money = money;
     }
 
     public void addLotto(List<Integer> inputNumber) {

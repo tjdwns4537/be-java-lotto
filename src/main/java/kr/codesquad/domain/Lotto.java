@@ -15,11 +15,10 @@ public class Lotto {
         return this.bonus;
     }
 
-    public void setWinNumber(List<Integer> winNumber) {
-        this.winNumber = winNumber;
-    }
-
     public List<Integer> getWinNumber() {
         return this.winNumber;
+    }
+    public void setWinNumber(int i) {
+        this.winNumber.add(i);
     }
 }
