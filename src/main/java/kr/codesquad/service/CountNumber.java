@@ -23,18 +23,10 @@ public class CountNumber {
         if(cnt == 6) person.setWinNumberArr(4,person.getWinNumberArr(4)+1);
     }
 
-    public Integer checkNumber(List<Integer> inputLotto, List<Integer> compLotto) { //로또 맞는 개수 구하기
-        int cnt = 0;
-        for (int i = 0; i < compLotto.size(); i++) {
-            cnt = checkNumberCount(inputLotto, compLotto.get(i),cnt);
-        }
-        return cnt;
-    }
-
-    public int checkNumberCount(List<Integer> inputLotto, int b,int cnt) {
-        if (inputLotto.contains(b)) {
-            cnt++;
-        }
+    public int checkNumber(List<Integer> inputLotto, List<Integer> compLotto){
+        int cnt = (int)inputLotto.stream()
+                .filter(num -> compLotto.contains(num))
+                .count();
         return cnt;
     }
 

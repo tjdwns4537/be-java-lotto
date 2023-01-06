@@ -12,7 +12,7 @@ public class Main {
     static InputService inputService = new InputService();
 
     public static void main(String[] args) {
-        inputService.startPersonInput(person);
+        inputService.moneyInput(person);
         inputService.startLottoInput(lotto);
         person = countNumber.collectNumberCount(person, lotto);
         person.print();

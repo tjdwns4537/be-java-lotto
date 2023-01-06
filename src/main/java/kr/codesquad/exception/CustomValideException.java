@@ -2,9 +2,9 @@ package kr.codesquad.exception;
 
 import kr.codesquad.domain.Lotto;
 
-public class CustomException{
+public class CustomValideException{
 
-    public CustomException() {
+    public CustomValideException() {
 
     }
 
